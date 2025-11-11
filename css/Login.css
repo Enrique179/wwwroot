@@ -1,0 +1,93 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+}
+
+.login-container {
+    text-align: center;
+    width: 100%;
+}
+
+    .login-container img {
+        width: 150px;
+        margin-bottom: 20px;
+    }
+
+    .login-container h3 {
+        color: green;
+        margin-bottom: 20px;
+        font-size: 24px;
+    }
+
+.form-group {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .form-group input {
+        width: 300px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50; /* Fondo verde */
+        color: white; /* Texto blanco */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+        outline: none; /* Quita el borde azul del navegador */
+    }
+
+        /* Mantiene el color verde al hacer clic o escribir */
+        .form-group input:focus {
+            background-color: #4CAF50;
+            color: white;
+            outline: 2px solid #45a049; /* Borde sutil al enfocar */
+        }
+
+        .form-group input::placeholder {
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+
+.btn-success {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+    .btn-success:hover {
+        background-color: #45a049;
+    }
+
+.alert {
+    margin-top: 15px;
+    font-weight: bold;
+    color: red;
+}
+/* Fuerza el color incluso cuando el navegador autocompleta */
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+    background-color: #4CAF50 !important;
+    -webkit-box-shadow: 0 0 0 30px #4CAF50 inset !important; /* Reemplaza el fondo blanco del autofill */
+    -webkit-text-fill-color: white !important; /* Texto blanco */
+    caret-color: white; /* Cursor blanco */
+    transition: background-color 9999s ease-in-out 0s; /* Evita parpadeo */
+}

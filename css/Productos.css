@@ -1,0 +1,110 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.search-bar input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+.search-bar input::placeholder {
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.table-container {
+    flex: 1;
+    overflow-y: auto;
+    margin: 0 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 200px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+/* Asegura que el contenedor ocupa todo el ancho y alinea items en fila */
+.search-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 20px;
+    /* ✅ Elimina justify-content: center — lo reemplazamos con spacers */
+}
+
+/* Espaciadores flexibles que empujan el input al centro */
+.flex-spacer {
+    flex: 1;
+}
+
+/* Estilo del input (ya lo tienes, pero lo reforzamos) */
+.search-logo-container input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo del logo */
+.search-logo-container img.logo-productos {
+    width: 60px;
+    height: auto;
+    /* ✅ Sin margin-right aquí — el espaciado lo maneja gap y flex-spacer */
+}
+.search-bar {
+    margin: 20px auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ← clave */
+    gap: 15px;
+}

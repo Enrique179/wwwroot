@@ -1,0 +1,114 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 100px);
+    width: 100%;
+    /* ✅ Sin margen/padding externo */
+}
+
+.sidebar {
+    width: 15%;
+    margin-left: -80px;
+    text-align: center;
+    background-color: #fff;
+    /* ✅ Padding superior aumentado para bajar el contenido */
+    padding: 32px 10px 10px; /* top = 32px → ajustado para alinear con .search-bar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    .sidebar img {
+        width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .sidebar h3 {
+        color: black;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .sidebar button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin: 10px 0;
+        width: 90%;
+    }
+
+        .sidebar button:hover {
+            background-color: #45a049;
+        }
+
+.content {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ✅ Ajuste: reducimos el margen superior para alinear con sidebar */
+.search-bar {
+    margin: 0 auto 20px; /* top = 0, bottom = 20px */
+    padding-top: 12px; /* ✅ Compensamos con padding-top = 12px → total ~32px */
+    text-align: center;
+}
+
+    .search-bar input {
+        width: 450px;
+        max-width: 90%; /* ← responsivo */
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+    }
+
+        .search-bar input::placeholder {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+.table-container {
+    width: calc(100% + 100px); /* ← 20px más ancho */
+    flex: 1;
+    overflow-y: auto;
+    margin: 0; /* ✅ Sin márgenes laterales → más ancho */
+    margin-left: 60px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: calc(100vh - 200px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+thead {
+    background-color: #4CAF50;
+    color: white;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
